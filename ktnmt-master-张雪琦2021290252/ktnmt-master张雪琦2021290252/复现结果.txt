@@ -1,0 +1,95 @@
+C:\Users\xueqi0819\AppData\Local\Programs\Python\Python311\python.exe C:\Users\xueqi0819\Desktop\ktnmt-master-张雪琦2021290252\ktnmt-master张雪琦2021290252\src\scripts\spm_train.py 
+['botchan.txt', 'data.txt', 'getVocab.py', 'load_model.py', 'm.model', 'm.vocab', 'm1.model', 'm1.vocab', 'm2.model', 'm2.vocab', 'm3.model', 'm3.vocab', 'overwrite_vocab.py', 'processData.py', 'spm_encode.py', 'spm_train.py', 'tSNE.py', 'tsneutil.py', 'wol.dev', '__pycache__']
+sentencepiece_trainer.cc(178) LOG(INFO) Running command: --input=./wol.dev --model_prefix=m3 --vocab_size=500
+sentencepiece_trainer.cc(78) LOG(INFO) Starts training with : 
+trainer_spec {
+  input: ./wol.dev
+  input_format: 
+  model_prefix: m3
+  model_type: UNIGRAM
+  vocab_size: 500
+  self_test_sample_size: 0
+  character_coverage: 0.9995
+  input_sentence_size: 0
+  shuffle_input_sentence: 1
+  seed_sentencepiece_size: 1000000
+  shrinking_factor: 0.75
+  max_sentence_length: 4192
+  num_threads: 16
+  num_sub_iterations: 2
+  max_sentencepiece_length: 16
+  split_by_unicode_script: 1
+  split_by_number: 1
+  split_by_whitespace: 1
+  split_digits: 0
+  pretokenization_delimiter: 
+  treat_whitespace_as_suffix: 0
+  allow_whitespace_only_pieces: 0
+  required_chars: 
+  byte_fallback: 0
+  vocabulary_output_piece_score: 1
+  train_extremely_large_corpus: 0
+  seed_sentencepieces_file: 
+  hard_vocab_limit: 1
+  use_all_vocab: 0
+  unk_id: 0
+  bos_id: 1
+  eos_id: 2
+  pad_id: -1
+  unk_piece: <unk>
+  bos_piece: <s>
+  eos_piece: </s>
+  pad_piece: <pad>
+  unk_surface:  ⁇ 
+  enable_differential_privacy: 0
+  differential_privacy_noise_level: 0
+  differential_privacy_clipping_threshold: 0
+}
+normalizer_spec {
+  name: nmt_nfkc
+  add_dummy_prefix: 1
+  remove_extra_whitespaces: 1
+  escape_whitespaces: 1
+  normalization_rule_tsv: 
+}
+denormalizer_spec {}
+trainer_interface.cc(353) LOG(INFO) SentenceIterator is not specified. Using MultiFileSentenceIterator.
+trainer_interface.cc(185) LOG(INFO) Loading corpus: ./wol.dev
+trainer_interface.cc(409) LOG(INFO) Loaded all 997 sentences
+trainer_interface.cc(425) LOG(INFO) Adding meta_piece: <unk>
+trainer_interface.cc(425) LOG(INFO) Adding meta_piece: <s>
+trainer_interface.cc(425) LOG(INFO) Adding meta_piece: </s>
+trainer_interface.cc(430) LOG(INFO) Normalizing sentences...
+trainer_interface.cc(539) LOG(INFO) all chars count=121048
+trainer_interface.cc(550) LOG(INFO) Done: 99.9513% characters are covered.
+trainer_interface.cc(560) LOG(INFO) Alphabet size=90
+trainer_interface.cc(561) LOG(INFO) Final character coverage=0.999513
+trainer_interface.cc(592) LOG(INFO) Done! preprocessed 997 sentences.
+unigram_model_trainer.cc(265) LOG(INFO) Making suffix array...
+unigram_model_trainer.cc(269) LOG(INFO) Extracting frequent sub strings... node_num=57942
+unigram_model_trainer.cc(312) LOG(INFO) Initialized 10852 seed sentencepieces
+trainer_interface.cc(598) LOG(INFO) Tokenizing input sentences with whitespace: 997
+trainer_interface.cc(609) LOG(INFO) Done! 7258
+unigram_model_trainer.cc(602) LOG(INFO) Using 7258 sentences for EM training
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=5119 obj=11.4381 num_tokens=15312 num_tokens/piece=2.99121
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=4524 obj=10.1979 num_tokens=15421 num_tokens/piece=3.40871
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=3391 obj=10.2564 num_tokens=16435 num_tokens/piece=4.84665
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=3385 obj=10.1634 num_tokens=16435 num_tokens/piece=4.85524
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=2537 obj=10.4111 num_tokens=17887 num_tokens/piece=7.05045
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=2536 obj=10.311 num_tokens=17891 num_tokens/piece=7.05481
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=1902 obj=10.6697 num_tokens=19606 num_tokens/piece=10.3081
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=1902 obj=10.5627 num_tokens=19607 num_tokens/piece=10.3086
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=1426 obj=10.9783 num_tokens=21433 num_tokens/piece=15.0302
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=1426 obj=10.8735 num_tokens=21437 num_tokens/piece=15.033
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=1069 obj=11.3232 num_tokens=23395 num_tokens/piece=21.8849
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=1069 obj=11.2198 num_tokens=23397 num_tokens/piece=21.8868
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=801 obj=11.6985 num_tokens=25369 num_tokens/piece=31.6717
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=801 obj=11.5883 num_tokens=25376 num_tokens/piece=31.6804
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=600 obj=12.1059 num_tokens=27419 num_tokens/piece=45.6983
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=600 obj=11.9834 num_tokens=27421 num_tokens/piece=45.7017
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=0 size=550 obj=12.1624 num_tokens=28043 num_tokens/piece=50.9873
+unigram_model_trainer.cc(618) LOG(INFO) EM sub_iter=1 size=550 obj=12.1279 num_tokens=28044 num_tokens/piece=50.9891
+trainer_interface.cc(687) LOG(INFO) Saving model: m3.model
+trainer_interface.cc(699) LOG(INFO) Saving vocabs: m3.vocab
+
+进程已结束，退出代码为 0
